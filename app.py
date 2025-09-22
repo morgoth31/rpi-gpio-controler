@@ -3,7 +3,10 @@ import RPi.GPIO as GPIO
 
 # --- CONFIGURATION ---
 # Numéros BCM des GPIO contrôlés
-PINS = [17, 27, 22]
+# Liste des GPIO pilotables (excluant les pins avec fonctions spéciales par défaut)
+PINS = [
+    4, 5, 6, 12, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+]
 
 # Initialisation GPIO
 GPIO.setmode(GPIO.BCM)
@@ -41,6 +44,10 @@ def set_pin(pin, state):
 def cleanup():
     GPIO.cleanup()
     return "GPIO nettoyés"
+
+@app.route("/docs")
+def docs():
+    return render_template("docs.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)

@@ -60,5 +60,10 @@ def robot():
 def plane():
     return render_template("plane.html")
 
+@app.route("/io_control")
+def io_control():
+    states = get_pin_states()
+    return render_template("io_control.html", pins=states)
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contrôle GPIO Raspberry Pi</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Contrôle des GPIO</h1>
+  <p>
+    <a href="/docs" class="btn">Voir la documentation du connecteur GPIO</a>
+  </p>
+  <table>
+    <tr>
+      <th>GPIO</th>
+      <th>État</th>
+      <th>Action</th>
+    </tr>
+    {% for pin, state in pins.items() %}
+    <tr>
+      <td>{{ pin }}</td>
+      <td>{{ 'ON' if state else 'OFF' }}</td>
+      <td>
+        <a class="btn" href="{{ url_for('toggle', pin=pin) }}">Toggle</a>
+        <a class="btn on" href="{{ url_for('set_pin', pin=pin, state=1) }}">ON</a>
+        <a class="btn off" href="{{ url_for('set_pin', pin=pin, state=0) }}">OFF</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <p><a href="{{ url_for('index') }}" class="btn">Back to Menu</a></p>
+</body>
+</html>

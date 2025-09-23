@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.control-pad {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+    margin: 50px auto;
+    width: 320px;
+}
+
+.control-pad .btn {
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.control-pad .up { grid-column: 2; grid-row: 1; }
+.control-pad .down { grid-column: 2; grid-row: 3; }
+.control-pad .left { grid-column: 1; grid-row: 2; }
+.control-pad .right { grid-column: 3; grid-row: 2; }
+
+.plane-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.joystick {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+}
+
+.joystick-handle {
+    width: 50px;
+    height: 50px;
+    background: #007BFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+}
+
+.throttle {
+    width: 50px;
+    height: 200px;
+    border: 2px solid #000;
+    position: relative;
+}
+
+.throttle-slider {
+    width: 100%;
+    height: 20px;
+    background: #dc3545;
+    position: absolute;
+    bottom: 0;
+}

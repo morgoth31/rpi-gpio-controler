@@ -45,5 +45,15 @@ def cleanup():
     GPIO.cleanup()
     return "GPIO nettoyés"
 
+@app.route("/docs")
+def docs():
+    return render_template("docs.html")
+
+app.add_url_rule(
+    "/favicon.ico",
+    endpoint="favicon",
+    redirect_to=url_for("img", filename="favicon.ico"),
+)
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)

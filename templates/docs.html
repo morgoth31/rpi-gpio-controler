@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentation GPIO - Raspberry Pi</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Documentation GPIO Raspberry Pi</h1>
+  <p>Cette page fournit une carte détaillée du connecteur GPIO à 40 broches du Raspberry Pi.</p>
+
+  <h2>Tableau de brochage (Pinout)</h2>
+  <p>Le tableau ci-dessous utilise la numérotation BCM.</p>
+  <table>
+    <tr>
+      <th>Pin #</th>
+      <th>Nom (BCM)</th>
+      <th>Fonction</th>
+      <th>Pin #</th>
+      <th>Nom (BCM)</th>
+      <th>Fonction</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3.3V</td>
+      <td>Alimentation</td>
+      <td>2</td>
+      <td>5V</td>
+      <td>Alimentation</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>GPIO 2 (SDA)</td>
+      <td>I2C</td>
+      <td>4</td>
+      <td>5V</td>
+      <td>Alimentation</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>GPIO 3 (SCL)</td>
+      <td>I2C</td>
+      <td>6</td>
+      <td>GND</td>
+      <td>Masse</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>GPIO 4</td>
+      <td>GPIO</td>
+      <td>8</td>
+      <td>GPIO 14 (TXD)</td>
+      <td>UART</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>GND</td>
+      <td>Masse</td>
+      <td>10</td>
+      <td>GPIO 15 (RXD)</td>
+      <td>UART</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>GPIO 17</td>
+      <td>GPIO</td>
+      <td>12</td>
+      <td>GPIO 18</td>
+      <td>GPIO</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>GPIO 27</td>
+      <td>GPIO</td>
+      <td>14</td>
+      <td>GND</td>
+      <td>Masse</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>GPIO 22</td>
+      <td>GPIO</td>
+      <td>16</td>
+      <td>GPIO 23</td>
+      <td>GPIO</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>3.3V</td>
+      <td>Alimentation</td>
+      <td>18</td>
+      <td>GPIO 24</td>
+      <td>GPIO</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>GPIO 10 (MOSI)</td>
+      <td>SPI</td>
+      <td>20</td>
+      <td>GND</td>
+      <td>Masse</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>GPIO 9 (MISO)</td>
+      <td>SPI</td>
+      <td>22</td>
+      <td>GPIO 25</td>
+      <td>GPIO</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>GPIO 11 (SCLK)</td>
+      <td>SPI</td>
+      <td>24</td>
+      <td>GPIO 8 (CE0)</td>
+      <td>SPI</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>GND</td>
+      <td>Masse</td>
+      <td>26</td>
+      <td>GPIO 7 (CE1)</td>
+      <td>SPI</td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td>ID_SD (I2C ID EEPROM)</td>
+        <td>Spécial</td>
+        <td>28</td>
+        <td>ID_SC (I2C ID EEPROM)</td>
+        <td>Spécial</td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>GPIO 5</td>
+        <td>GPIO</td>
+        <td>30</td>
+        <td>GND</td>
+        <td>Masse</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>GPIO 6</td>
+        <td>GPIO</td>
+        <td>32</td>
+        <td>GPIO 12</td>
+        <td>GPIO</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td>GPIO 13</td>
+        <td>GPIO</td>
+        <td>34</td>
+        <td>GND</td>
+        <td>Masse</td>
+    </tr>
+    <tr>
+        <td>35</td>
+        <td>GPIO 19</td>
+        <td>GPIO</td>
+        <td>36</td>
+        <td>GPIO 16</td>
+        <td>GPIO</td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td>GPIO 26</td>
+        <td>GPIO</td>
+        <td>38</td>
+        <td>GPIO 20</td>
+        <td>GPIO</td>
+    </tr>
+    <tr>
+        <td>39</td>
+        <td>GND</td>
+        <td>Masse</td>
+        <td>40</td>
+        <td>GPIO 21</td>
+        <td>GPIO</td>
+    </tr>
+  </table>
+
+  <br>
+  <a href="/" class="btn">Retour à l'accueil</a>
+
+</body>
+</html>

@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
-import RPi.GPIO as GPIO
+try:
+    import RPi.GPIO as GPIO
+except (RuntimeError, ModuleNotFoundError):
+    from mock_gpio import GPIO
 
 # --- CONFIGURATION ---
 # Numéros BCM des GPIO contrôlés
@@ -48,6 +51,14 @@ def cleanup():
 @app.route("/docs")
 def docs():
     return render_template("docs.html")
+
+@app.route("/robot")
+def robot():
+    return render_template("robot.html")
+
+@app.route("/plane")
+def plane():
+    return render_template("plane.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)

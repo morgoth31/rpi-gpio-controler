@@ -7,27 +7,13 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <h1>Contrôle des GPIO</h1>
+  <h1>Select Control Pad</h1>
   <p>
-    <a href="/docs" class="btn">Voir la documentation du connecteur GPIO</a>
+    <a href="/robot" class="btn">Robot Control</a>
+    <a href="/plane" class="btn">Plane Control</a>
   </p>
-  <table>
-    <tr>
-      <th>GPIO</th>
-      <th>État</th>
-      <th>Action</th>
-    </tr>
-    {% for pin, state in pins.items() %}
-    <tr>
-      <td>{{ pin }}</td>
-      <td>{{ 'ON' if state else 'OFF' }}</td>
-      <td>
-        <a class="btn" href="{{ url_for('toggle', pin=pin) }}">Toggle</a>
-        <a class="btn on" href="{{ url_for('set_pin', pin=pin, state=1) }}">ON</a>
-        <a class="btn off" href="{{ url_for('set_pin', pin=pin, state=0) }}">OFF</a>
-      </td>
-    </tr>
-    {% endfor %}
-  </table>
+  <p>
+    <a href="/docs" class="btn">View GPIO Documentation</a>
+  </p>
 </body>
 </html>

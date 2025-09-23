@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Robot Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='control.css') }}">
+</head>
+<body>
+    <h1>Robot Control Pad</h1>
+    <div class="control-pad">
+        <a href="{{ url_for('set_pin', pin=17, state=1) }}" class="btn up">↑</a>
+        <a href="{{ url_for('set_pin', pin=27, state=1) }}" class="btn down">↓</a>
+        <a href="{{ url_for('set_pin', pin=22, state=1) }}" class="btn left">←</a>
+        <a href="{{ url_for('set_pin', pin=23, state=1) }}" class="btn right">→</a>
+    </div>
+    <p><a href="{{ url_for('index') }}" class="btn">Back to Menu</a></p>
+</body>
+</html>
